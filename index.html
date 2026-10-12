@@ -2,357 +2,557 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Help support the journey toward a reliable commuter car.">
-  <title>The Commuter Fund | Support the Journey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    :root {
-      --navy: #101e2e;
-      --navy-light: #1e3349;
-      --gold: #efb56b;
-      --cream: #f7f5f0;
-      --white: #ffffff;
-      --muted: #596777;
-    }
+<title>Buy Me a Corolla!</title>
 
-    * {
-      box-sizing: border-box;
-    }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+:root {
+  --dark: #101b22;
+  --green: #d3f36a;
+  --light: #f7f7f2;
+  --gray: #647078;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--navy);
-      background: var(--cream);
-      line-height: 1.7;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    a {
-      text-decoration: none;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+}
 
-    header {
-      background: var(--navy);
-      border-bottom: 1px solid #334152;
-    }
+h1, h2, h3 {
+  font-family: 'Manrope', sans-serif;
+}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 0;
-      gap: 20px;
-    }
+a {
+  text-decoration: none;
+}
 
-    .logo {
-      color: white;
-      font-weight: 800;
-      font-size: 19px;
-      letter-spacing: -0.5px;
-    }
+.container {
+  width: min(1150px, 90%);
+  margin: auto;
+}
 
-    .logo span {
-      color: var(--gold);
-    }
+/* NAVIGATION */
 
-    .nav-link {
-      color: #e4e9ef;
-      font-size: 14px;
-    }
+header {
+  background: var(--dark);
+  border-bottom: 1px solid #35434a;
+}
 
-    .hero {
-      color: white;
-      background:
-        radial-gradient(circle at 85% 30%, #2c4661, transparent 45%),
-        var(--navy);
-      padding: 115px 0 125px;
-    }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  gap: 15px;
+}
 
-    .hero-content {
-      max-width: 760px;
-    }
+.logo {
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+}
 
-    .eyebrow {
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
+.logo span {
+  color: var(--green);
+}
 
-    h1 {
-      font-size: clamp(42px, 6vw, 74px);
-      line-height: 1.12;
-      letter-spacing: -2px;
-      margin: 0 0 25px;
-    }
+.nav-button {
+  color: var(--dark);
+  background: var(--green);
+  padding: 12px 20px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 13px;
+}
 
-    .hero p {
-      color: #cbd4df;
-      font-size: 19px;
-      max-width: 570px;
-      margin-bottom: 35px;
-    }
+/* HERO SECTION */
 
-    .button {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      padding: 15px 27px;
-      border-radius: 8px;
-      font-size: 15px;
-      font-weight: 800;
-      transition: transform 0.2s, background 0.2s;
-    }
+.hero {
+  background:
+    radial-gradient(circle at 80% 40%, #344c50, transparent 50%),
+    var(--dark);
+  color: white;
+  padding: 100px 0;
+  overflow: hidden;
+}
 
-    .button:hover {
-      background: #ffd096;
-      transform: translateY(-3px);
-    }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
 
-    section {
-      padding: 90px 0;
-    }
+.tagline {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 
-    .section-label {
-      color: #997045;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+h1 {
+  font-size: clamp(58px, 8vw, 110px);
+  line-height: 0.98;
+  letter-spacing: -5px;
+  margin: 25px 0;
+}
 
-    h2 {
-      font-size: clamp(30px, 4vw, 44px);
-      line-height: 1.2;
-      letter-spacing: -1px;
-      margin: 15px 0 25px;
-    }
+h1 span {
+  color: var(--green);
+}
 
-    .about-content {
-      max-width: 730px;
-    }
+.hero p {
+  color: #c2cecc;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 510px;
+}
 
-    .about-content p {
-      color: var(--muted);
-      font-size: 17px;
-    }
+.button {
+  display: inline-block;
+  background: var(--green);
+  color: var(--dark);
+  padding: 19px 30px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 14px;
+  margin-top: 20px;
+  transition: 0.25s;
+}
 
-    .goal-section {
-      background: white;
-    }
+.button:hover {
+  background: #e5ff97;
+  transform: translateY(-4px);
+}
 
-    .goal-card {
-      background: var(--cream);
-      border: 1px solid #e4e1d9;
-      border-radius: 16px;
-      padding: 40px;
-      max-width: 750px;
-    }
+.car-display {
+  background: #283d42;
+  border-radius: 24px;
+  padding: 25px;
+  transform: rotate(-3deg);
+  box-shadow: 0 30px 70px #0005;
+}
 
-    .goal-amount {
-      font-size: 45px;
-      font-weight: 800;
-      letter-spacing: -1px;
-      margin: 5px 0;
-    }
+.car-display img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
 
-    .goal-caption {
-      color: var(--muted);
-    }
+.car-caption {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
 
-    .progress-track {
-      width: 100%;
-      background: #dfe4e8;
-      height: 12px;
-      border-radius: 99px;
-      margin: 28px 0 15px;
-      overflow: hidden;
-    }
+/* HIGHLIGHT BAR */
 
-    .progress-fill {
-      width: 0%;
-      height: 100%;
-      background: #3d866a;
-      border-radius: 99px;
-    }
+.highlight {
+  background: var(--green);
+  padding: 23px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
 
-    .donate-section {
-      background: var(--navy);
-      color: white;
-      text-align: center;
-    }
+/* CONTENT SECTIONS */
 
-    .donate-section h2 {
-      max-width: 650px;
-      margin: 15px auto 20px;
-    }
+section {
+  padding: 110px 0;
+}
 
-    .donate-section p {
-      color: #cbd4df;
-      max-width: 570px;
-      margin: 0 auto 30px;
-    }
+.section-label {
+  color: #68874b;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
 
-    .coming-soon {
-      display: inline-block;
-      border: 1px solid #677688;
-      padding: 13px 25px;
-      border-radius: 8px;
-      color: #dfe6ed;
-      font-weight: 600;
-    }
+h2 {
+  font-size: clamp(36px, 5vw, 60px);
+  letter-spacing: -2px;
+  line-height: 1.15;
+  margin: 20px 0 30px;
+}
 
-    footer {
-      background: #0b1521;
-      padding: 30px 0;
-      color: #a7b1be;
-      font-size: 13px;
-      text-align: center;
-    }
+.story {
+  max-width: 760px;
+}
 
-    @media (max-width: 600px) {
-      .hero {
-        padding: 75px 0 90px;
-      }
+.story p {
+  color: var(--gray);
+  font-size: 18px;
+  line-height: 1.9;
+}
 
-      section {
-        padding: 65px 0;
-      }
+/* FUNDRAISING GOAL */
 
-      .goal-card {
-        padding: 25px;
-      }
+.goal-section {
+  background: white;
+}
 
-      .goal-amount {
-        font-size: 36px;
-      }
+.goal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
 
-      .nav-link {
-        font-size: 12px;
-      }
-    }
-  </style>
+.goal-card {
+  background: var(--light);
+  padding: 45px;
+  border-radius: 22px;
+  border: 1px solid #e1e5dd;
+}
+
+.goal-card h3 {
+  color: var(--gray);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.amount {
+  font-size: 65px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  letter-spacing: -4px;
+  margin: 15px 0;
+}
+
+.amount small {
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.progress {
+  height: 15px;
+  background: #dbe3d6;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #83b33e;
+}
+
+.goal-note {
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* DONATION SECTION */
+
+.donate {
+  background: #203536;
+  color: white;
+  text-align: center;
+}
+
+.donate h2 {
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+.donate h2 span {
+  color: var(--green);
+}
+
+.donate p {
+  color: #c5d0ca;
+  max-width: 550px;
+  line-height: 1.9;
+  margin: 20px auto;
+}
+
+.coming-soon {
+  display: inline-block;
+  border: 1px solid #8d9d94;
+  border-radius: 50px;
+  padding: 18px 30px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--dark);
+  color: #a9b6b3;
+  padding: 35px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .hero-grid,
+  .goal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  h1 {
+    letter-spacing: -3px;
+  }
+
+  .car-display {
+    transform: none;
+  }
+
+  section {
+    padding: 75px 0;
+  }
+
+  .amount {
+    font-size: 48px;
+  }
+
+  .goal-card {
+    padding: 30px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <nav class="container">
-      <a class="logo" href="#">
-        THE COMMUTER<span> FUND.</span>
+<!-- NAVIGATION -->
+
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">
+      BUY ME A <span>CAR!</span>
+    </a>
+
+    <a class="nav-button" href="#donate">
+      HELP OUT ↗
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="tagline">
+        THE INTERNET, MEET MY NEXT CAR
+      </div>
+
+      <h1>
+        BUY ME<br>
+        <span>A CAR!</span>
+      </h1>
+
+      <p>
+        Yep. You read that correctly.
+        I'm asking the internet to help me
+        buy a Toyota Corolla.
+      </p>
+
+      <p>
+        Nothing fancy. Nothing ridiculous.
+        Just a reliable commuter car.
+        Think we can make it happen?
+      </p>
+
+      <a class="button" href="#donate">
+        HELP ME BUY A COROLLA ↗
       </a>
-      <a class="nav-link" href="#about">Our Mission</a>
-    </nav>
-  </header>
+    </div>
 
-  <main>
-    <div class="hero">
-      <div class="container hero-content">
-        <div class="eyebrow">
-          A small contribution. A big difference.
-        </div>
+    <div class="car-display">
+      <img src="car.jpg"
+           alt="Toyota Corolla">
 
-        <h1>Every journey<br>starts somewhere.</h1>
-
-        <p>
-          Help make reliable, everyday transportation
-          a reality. Every contribution brings
-          the goal a little closer.
-        </p>
-
-        <a class="button" href="#donate">
-          Support the Journey &rarr;
-        </a>
+      <div class="car-caption">
+        THE DREAM: A TOYOTA COROLLA
       </div>
     </div>
 
-    <section id="about">
-      <div class="container about-content">
-        <div class="section-label">The Mission</div>
+  </div>
+</div>
 
-        <h2>A reliable car.<br>A little more freedom.</h2>
+<!-- HIGHLIGHT -->
 
-        <p>
-          This project is about raising funds toward
-          a dependable commuter vehicle.
-        </p>
+<div class="highlight">
+  NO FERRARI. NO LAMBORGHINI.
+  JUST A COROLLA. 🚗
+</div>
 
-        <p>
-          No luxury, no extravagance. Just practical
-          transportation for the road ahead.
-        </p>
+<!-- STORY -->
 
-        <p>
-          I'm documenting the process and inviting
-          anyone who wants to be part of the journey
-          to contribute.
-        </p>
-      </div>
-    </section>
+<section id="story">
+  <div class="container story">
 
-    <section class="goal-section" id="goal">
-      <div class="container">
-        <div class="section-label">Our Goal</div>
-        <h2>Making progress together.</h2>
-
-        <div class="goal-card">
-          <div class="goal-caption">
-            Fundraising target
-          </div>
-
-          <div class="goal-amount">$5,000 CAD</div>
-
-          <div class="progress-track">
-            <div class="progress-fill"></div>
-          </div>
-
-          <div class="goal-caption">
-            Contributions will be tracked here
-            once fundraising begins.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="donate-section" id="donate">
-      <div class="container">
-        <div class="eyebrow">Be Part of the Journey</div>
-
-        <h2>Every little bit helps move us forward.</h2>
-
-        <p>
-          Whether it's a small contribution or
-          simply sharing this page, your support
-          is appreciated.
-        </p>
-
-        <div class="coming-soon">
-          Donations Opening Soon
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      The Commuter Fund &copy; 2026
-      <br>
-      A personal fundraising project.
+    <div class="section-label">
+      01 / THE STORY
     </div>
-  </footer>
+
+    <h2>
+      Why a Corolla?<br>
+      Because it makes sense.
+    </h2>
+
+    <p>
+      I'm not looking for a luxury car,
+      a sports car, or anything extravagant.
+    </p>
+
+    <p>
+      I've got my eye on a Toyota Corolla.
+      Something reliable, economical,
+      and practical for everyday commuting.
+    </p>
+
+    <p>
+      And yes, I've actually made an entire
+      website asking people to help me buy one.
+    </p>
+
+    <p>
+      Maybe it's a little ridiculous.
+      But hey, the internet has made
+      stranger things happen.
+    </p>
+
+    <p>
+      If you want to help, fantastic.
+      If you just want to share this
+      website with someone, that's
+      appreciated too!
+    </p>
+
+  </div>
+</section>
+
+<!-- FUNDRAISING -->
+
+<section class="goal-section" id="goal">
+
+  <div class="container goal-grid">
+
+    <div>
+      <div class="section-label">
+        02 / THE GOAL
+      </div>
+
+      <h2>
+        Let's get this<br>
+        Corolla on the road.
+      </h2>
+
+      <p>
+        Every contribution gets us
+        closer to making this happen.
+      </p>
+
+      <p>
+        Once fundraising begins,
+        I'll update the progress
+        right here on the website.
+      </p>
+    </div>
+
+    <div class="goal-card">
+
+      <h3>Example fundraising goal</h3>
+
+      <div class="amount">
+        $5,000 <small>CAD</small>
+      </div>
+
+      <div class="progress">
+        <div class="progress-fill"></div>
+      </div>
+
+      <p class="goal-note">
+        Fundraising hasn't started yet.
+        The amount shown is an example,
+        not a confirmed target.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- DONATIONS -->
+
+<section class="donate" id="donate">
+
+  <div class="container">
+
+    <div class="tagline">
+      03 / MAKE IT HAPPEN
+    </div>
+
+    <h2>
+      Help me buy<br>
+      <span>that Corolla!</span>
+    </h2>
+
+    <p>
+      A few dollars, a shared link,
+      or just telling a friend.
+      Every little bit helps
+      move the mission forward.
+    </p>
+
+    <p>
+      Let's see if the internet
+      can actually buy someone
+      a commuter car.
+    </p>
+
+    <div class="coming-soon">
+      DONATIONS COMING SOON ↗
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Buy Me a Car!
+    <br>
+    Personal fundraiser — not a registered charity.
+  </div>
+</footer>
 
 </body>
 </html>
