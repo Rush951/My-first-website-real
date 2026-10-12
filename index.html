@@ -4,59 +4,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A Prince George fundraiser with one simple goal: help me buy a Toyota Corolla. Forget buying me a coffee — buy me a car!">
+<title>Buy Me a Corolla | Prince George, BC</title>
 
-<title>Buy Me a Corolla!</title>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --dark: #101b22;
-  --green: #d3f36a;
-  --light: #f7f7f2;
-  --gray: #647078;
+  --dark: #112320;
+  --forest: #244137;
+  --lime: #d5fa75;
+  --cream: #f6f2e8;
+  --white: #ffffff;
+  --muted: #68776d;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: 'DM Sans', sans-serif;
-  background: var(--light);
+  background: var(--cream);
   color: var(--dark);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
 }
 
 h1, h2, h3 {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
 .container {
-  width: min(1150px, 90%);
+  width: min(1120px, 90%);
   margin: auto;
 }
 
-/* NAVIGATION */
-
 header {
   background: var(--dark);
-  border-bottom: 1px solid #35434a;
+  border-bottom: 1px solid #365249;
 }
 
 nav {
+  min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0;
   gap: 15px;
 }
 
@@ -66,242 +63,366 @@ nav {
   font-size: 18px;
 }
 
-.logo span {
-  color: var(--green);
-}
+.logo span { color: var(--lime); }
 
-.nav-button {
-  color: var(--dark);
-  background: var(--green);
-  padding: 12px 20px;
-  border-radius: 40px;
+nav a.nav-link {
+  color: #e2eadf;
   font-weight: 700;
   font-size: 13px;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero {
   background:
-    radial-gradient(circle at 80% 40%, #344c50, transparent 50%),
+    radial-gradient(circle at 80% 25%, #365748 0%, transparent 45%),
     var(--dark);
   color: white;
-  padding: 100px 0;
+  padding: 95px 0 110px;
   overflow: hidden;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  gap: 55px;
   align-items: center;
 }
 
-.tagline {
-  color: var(--green);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
+.eyebrow {
+  color: var(--lime);
   text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+  font-size: 12px;
 }
 
 h1 {
-  font-size: clamp(58px, 8vw, 110px);
-  line-height: 0.98;
-  letter-spacing: -5px;
-  margin: 25px 0;
+  font-size: clamp(49px, 6.5vw, 88px);
+  letter-spacing: -4px;
+  margin: 22px 0;
 }
 
-h1 span {
-  color: var(--green);
-}
+h1 span { color: var(--lime); }
 
 .hero p {
-  color: #c2cecc;
+  color: #d3e0d6;
   font-size: 18px;
-  line-height: 1.8;
-  max-width: 510px;
+  max-width: 540px;
 }
 
 .button {
   display: inline-block;
-  background: var(--green);
+  padding: 17px 27px;
+  background: var(--lime);
   color: var(--dark);
-  padding: 19px 30px;
   border-radius: 50px;
   font-weight: 800;
-  font-size: 14px;
   margin-top: 20px;
-  transition: 0.25s;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  font-family: inherit;
 }
 
 .button:hover {
-  background: #e5ff97;
-  transform: translateY(-4px);
+  background: #e8ffad;
+  transform: translateY(-3px);
 }
 
-.car-display {
-  background: #283d42;
-  border-radius: 24px;
-  padding: 25px;
-  transform: rotate(-3deg);
-  box-shadow: 0 30px 70px #0005;
+.car-card {
+  background: #28463c;
+  padding: 15px;
+  border-radius: 25px;
+  box-shadow: 0 30px 80px #0005;
+  transform: rotate(2deg);
 }
 
-.car-display img {
-  width: 100%;
+.image-frame {
+  height: 300px;
+  border-radius: 16px;
+  background: linear-gradient(135deg,#47645c,#1a3029);
+  overflow: hidden;
+  position: relative;
+}
+
+.image-frame img {
   display: block;
-  border-radius: 14px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.car-caption {
-  color: var(--green);
+.image-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  color: white;
+  padding: 25px;
+}
+
+.image-fallback .symbol { font-size: 65px; }
+
+.image-fallback p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.car-card img {
+  position: relative;
+  z-index: 1;
+}
+
+.car-label {
+  color: var(--lime);
+  padding: 15px 7px 4px;
   font-size: 12px;
-  font-weight: 700;
-  margin-top: 20px;
+  font-weight: 800;
   letter-spacing: 2px;
 }
 
-/* HIGHLIGHT BAR */
+/* MARQUEE-LIKE STRIP */
 
-.highlight {
-  background: var(--green);
-  padding: 23px;
+.banner {
+  padding: 23px 15px;
   text-align: center;
+  background: var(--lime);
+  color: var(--dark);
   font-weight: 800;
-  letter-spacing: 1px;
   font-size: 14px;
+  letter-spacing: 1px;
 }
 
-/* CONTENT SECTIONS */
+/* SECTIONS */
 
-section {
-  padding: 110px 0;
-}
+section { padding: 95px 0; }
 
 .section-label {
-  color: #68874b;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  color: #64834d;
   font-size: 12px;
+  letter-spacing: 2.5px;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: clamp(36px, 5vw, 60px);
-  letter-spacing: -2px;
-  line-height: 1.15;
-  margin: 20px 0 30px;
+  font-size: clamp(35px, 4.5vw, 58px);
+  margin: 18px 0 25px;
 }
 
 .story {
-  max-width: 760px;
+  max-width: 790px;
 }
 
 .story p {
-  color: var(--gray);
+  color: var(--muted);
   font-size: 18px;
-  line-height: 1.9;
 }
 
-/* FUNDRAISING GOAL */
+/* MR PG FEATURE */
 
-.goal-section {
-  background: white;
-}
+.mrpg-section { background: white; }
 
-.goal-grid {
+.mrpg-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
   align-items: center;
 }
 
-.goal-card {
-  background: var(--light);
-  padding: 45px;
-  border-radius: 22px;
-  border: 1px solid #e1e5dd;
+.mrpg-frame {
+  background: #e8eee2;
+  border: 2px dashed #a0b59d;
+  border-radius: 24px;
+  padding: 30px;
+  text-align: center;
 }
 
-.goal-card h3 {
-  color: var(--gray);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.mrpg-frame img {
+  max-width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
-.amount {
-  font-size: 65px;
-  font-family: 'Manrope', sans-serif;
+.mrpg-placeholder {
+  padding: 50px 15px;
+}
+
+.mrpg-placeholder .symbol {
+  font-size: 75px;
+}
+
+.mrpg-placeholder p {
+  color: #617669;
+  font-size: 14px;
+}
+
+.mrpg-copy p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* COFFEE CALCULATOR */
+
+.coffee-section { background: var(--dark); color: white; }
+
+.coffee-section .section-label { color: var(--lime); }
+
+.coffee-section h2 { max-width: 750px; }
+
+.coffee-section .intro {
+  color: #c5d8cd;
+  max-width: 690px;
+  font-size: 17px;
+}
+
+.coffee-box {
+  margin-top: 35px;
+  background: #244137;
+  border: 1px solid #456354;
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 760px;
+}
+
+.coffee-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.coffee-option {
+  background: #365547;
+  color: white;
+  border: 1px solid #718879;
+  padding: 13px 22px;
+  border-radius: 50px;
   font-weight: 800;
-  letter-spacing: -4px;
-  margin: 15px 0;
+  cursor: pointer;
+  font-size: 15px;
 }
 
-.amount small {
-  font-size: 18px;
-  letter-spacing: 0;
+.coffee-option.active {
+  background: var(--lime);
+  color: var(--dark);
+  border-color: var(--lime);
 }
 
-.progress {
-  height: 15px;
-  background: #dbe3d6;
-  border-radius: 20px;
+.coffee-result {
+  background: #152d25;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.coffee-result strong {
+  color: var(--lime);
+  font-size: 42px;
+  display: block;
+  line-height: 1.2;
+}
+
+.coffee-result p {
+  color: #d0dfd3;
+  margin-bottom: 0;
+}
+
+.fine-print {
+  color: #acc2b4;
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+/* GOAL */
+
+.goal-section { background: white; }
+
+.goal-card {
+  background: var(--cream);
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 800px;
+  border: 1px solid #e0e3db;
+}
+
+.goal-amount {
+  font-size: clamp(42px, 6vw, 70px);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1.2;
+}
+
+.progress-track {
+  height: 16px;
+  background: #dce4d7;
+  border-radius: 50px;
+  margin: 25px 0 15px;
   overflow: hidden;
 }
 
 .progress-fill {
-  width: 0%;
   height: 100%;
-  background: #83b33e;
+  width: 0%;
+  background: #6b9d40;
 }
 
-.goal-note {
-  color: var(--gray);
+.goal-card p { color: var(--muted); }
+
+.stats {
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+  margin-top: 27px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.stat span {
   font-size: 13px;
-  line-height: 1.7;
+  color: var(--muted);
 }
 
-/* DONATION SECTION */
+/* CALL TO ACTION */
 
-.donate {
-  background: #203536;
+.donate-section {
+  background: var(--forest);
   color: white;
   text-align: center;
 }
 
-.donate h2 {
-  max-width: 750px;
-  margin: 20px auto;
-}
+.donate-section h2 { margin: 20px auto; }
 
-.donate h2 span {
-  color: var(--green);
-}
-
-.donate p {
-  color: #c5d0ca;
-  max-width: 550px;
-  line-height: 1.9;
+.donate-section p {
+  max-width: 600px;
   margin: 20px auto;
+  color: #d2e3d7;
 }
 
 .coming-soon {
   display: inline-block;
-  border: 1px solid #8d9d94;
+  border: 1px solid #a6bfa8;
+  padding: 17px 28px;
   border-radius: 50px;
-  padding: 18px 30px;
+  font-weight: 800;
   margin-top: 20px;
-  font-weight: 700;
 }
 
-/* FOOTER */
-
 footer {
-  background: var(--dark);
-  color: #a9b6b3;
-  padding: 35px 0;
+  background: #0c1a17;
+  color: #b1c3b5;
+  padding: 35px 15px;
   text-align: center;
   font-size: 13px;
 }
@@ -309,50 +430,32 @@ footer {
 /* MOBILE */
 
 @media (max-width: 800px) {
-  .hero-grid,
-  .goal-grid {
+  .hero-grid, .mrpg-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .hero {
-    padding: 70px 0;
-  }
-
-  h1 {
-    letter-spacing: -3px;
-  }
-
-  .car-display {
-    transform: none;
-  }
-
-  section {
-    padding: 75px 0;
-  }
-
-  .amount {
-    font-size: 48px;
-  }
-
-  .goal-card {
-    padding: 30px;
-  }
+  .hero { padding: 70px 0; }
+  h1 { letter-spacing: -2px; }
+  section { padding: 65px 0; }
+  .car-card { transform: none; }
+  .image-frame { height: 250px; }
+  .coffee-box, .goal-card { padding: 25px; }
+  .coffee-result strong { font-size: 34px; }
+  nav { min-height: 70px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <header>
   <nav class="container">
-    <a class="logo" href="#home">
-      BUY ME A <span>CAR!</span>
+    <a href="#home" class="logo">
+      BUY ME A <span>COROLLA.</span>
     </a>
-
-    <a class="nav-button" href="#donate">
-      HELP OUT ↗
+    <a href="#coffee" class="nav-link">
+      ☕ SKIP THE COFFEE ↗
     </a>
   </nav>
 </header>
@@ -365,194 +468,408 @@ footer {
   <div class="container hero-grid">
 
     <div>
-      <div class="tagline">
-        THE INTERNET, MEET MY NEXT CAR
+      <div class="eyebrow">
+        📍 PRINCE GEORGE, BRITISH COLUMBIA
       </div>
 
       <h1>
-        BUY ME<br>
-        <span>A CAR!</span>
+        FORGET<br>
+        THE COFFEE.<br>
+        <span>BUY ME<br>A CAR.</span>
       </h1>
 
       <p>
-        Yep. You read that correctly.
-        I'm asking the internet to help me
-        buy a Toyota Corolla.
+        You've heard of "Buy Me a Coffee."
+        Well, I'm from Prince George, BC,
+        and I've got a slightly bigger request.
       </p>
 
       <p>
-        Nothing fancy. Nothing ridiculous.
-        Just a reliable commuter car.
-        Think we can make it happen?
+        One guy. One Toyota Corolla.
+        One city that knows the value
+        of a reliable vehicle in January.
       </p>
 
-      <a class="button" href="#donate">
-        HELP ME BUY A COROLLA ↗
+      <a class="button" href="#coffee">
+        BUY ME A COFFEE (SORT OF) ↗
       </a>
     </div>
 
-    <div class="car-display">
-      <img src="car.png"
-           alt="Toyota Corolla">
+    <div class="car-card">
+      <div class="image-frame">
+        <div class="image-fallback">
+          <div class="symbol">🚗</div>
+          <strong>MY DREAM COMMUTER</strong>
+          <p>Toyota Corolla photo coming soon</p>
+        </div>
 
-      <div class="car-caption">
-        THE DREAM: A TOYOTA COROLLA
+        <img src="car.jpg" alt="Toyota Corolla"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="car-label">
+        THE DREAM: A RELIABLE COROLLA
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- HIGHLIGHT -->
-
-<div class="highlight">
+<div class="banner">
   NO FERRARI. NO LAMBORGHINI.
-  JUST A COROLLA. 🚗
+  JUST A COROLLA THAT STARTS AT -30°C.
 </div>
 
 <!-- STORY -->
 
 <section id="story">
   <div class="container story">
-
     <div class="section-label">
-      01 / THE STORY
+      01 / THE GREAT NORTHERN DREAM
     </div>
 
     <h2>
-      Why a Corolla?<br>
-      Because it makes sense.
+      Just a guy in PG<br>
+      dreaming of a Corolla.
     </h2>
 
     <p>
-      I'm not looking for a luxury car,
-      a sports car, or anything extravagant.
+      Some people dream of a mansion.
+      Some people dream of a sports car.
+      Me? I'm dreaming of a Toyota Corolla.
     </p>
 
     <p>
-      I've got my eye on a Toyota Corolla.
-      Something reliable, economical,
-      and practical for everyday commuting.
+      Living in Prince George means
+      understanding a few things:
+      winter is long, roads get icy,
+      and a dependable vehicle is worth
+      its weight in gold.
     </p>
 
     <p>
-      And yes, I've actually made an entire
-      website asking people to help me buy one.
+      So I've decided to try something
+      a little ridiculous: asking the
+      internet to help fund my commuter car.
     </p>
 
     <p>
-      Maybe it's a little ridiculous.
-      But hey, the internet has made
-      stranger things happen.
+      No pressure. No guilt.
+      Just a little northern humour,
+      a big dream, and hopefully
+      a very practical sedan.
     </p>
-
-    <p>
-      If you want to help, fantastic.
-      If you just want to share this
-      website with someone, that's
-      appreciated too!
-    </p>
-
   </div>
 </section>
 
-<!-- FUNDRAISING -->
+<!-- MR PG -->
 
-<section class="goal-section" id="goal">
+<section class="mrpg-section" id="mrpg">
+  <div class="container mrpg-grid">
 
-  <div class="container goal-grid">
+    <div class="mrpg-frame">
 
-    <div>
+      <!--
+        Upload an image named mr-pg-logo.png
+        into the same GitHub folder as index.html.
+      -->
+
+      <img src="car.png"
+           alt="Mr. PG image"
+           onerror="this.style.display='none';
+                    document.getElementById('mrpg-fallback').style.display='block'">
+
+      <div class="mrpg-placeholder" id="mrpg-fallback"
+           style="display:none">
+        <div class="symbol">🌲</div>
+        <strong>MR. PG GOES HERE</strong>
+        <p>Upload mr-pg-logo.png to GitHub</p>
+      </div>
+    </div>
+
+    <div class="mrpg-copy">
       <div class="section-label">
-        02 / THE GOAL
+        02 / PROUDLY PRINCE GEORGE
       </div>
 
       <h2>
-        Let's get this<br>
-        Corolla on the road.
+        If Mr. PG can stand<br>
+        through every winter...
       </h2>
 
       <p>
-        Every contribution gets us
-        closer to making this happen.
+        Surely we can get one Corolla
+        through a Prince George commute.
       </p>
 
       <p>
-        Once fundraising begins,
-        I'll update the progress
-        right here on the website.
-      </p>
-    </div>
-
-    <div class="goal-card">
-
-      <h3>Example fundraising goal</h3>
-
-      <div class="amount">
-        $5,000 <small>CAD</small>
-      </div>
-
-      <div class="progress">
-        <div class="progress-fill"></div>
-      </div>
-
-      <p class="goal-note">
-        Fundraising hasn't started yet.
-        The amount shown is an example,
-        not a confirmed target.
+        This little campaign is inspired
+        by the city I call home,
+        its legendary winters,
+        and its equally legendary mascot.
       </p>
 
+      <p>
+        Mr. PG, if you're reading this,
+        I could use a co-pilot.
+      </p>
     </div>
 
   </div>
-
 </section>
 
-<!-- DONATIONS -->
+<!-- COFFEE CALCULATOR -->
 
-<section class="donate" id="donate">
-
+<section class="coffee-section" id="coffee">
   <div class="container">
 
-    <div class="tagline">
-      03 / MAKE IT HAPPEN
+    <div class="section-label">
+      03 / THE COFFEE-TO-COROLLA ECONOMY
     </div>
 
     <h2>
-      Help me buy<br>
-      <span>that Corolla!</span>
+      Forget buying me a coffee.<br>
+      Help buy me a car.
+    </h2>
+
+    <p class="intro">
+      Let's pretend one coffee costs $5.
+      How many coffees would it take to
+      get this Corolla on the road?
+      Select an amount and find out.
+    </p>
+
+    <div class="coffee-box">
+
+      <div class="eyebrow">
+        CHOOSE YOUR VIRTUAL COFFEE ORDER
+      </div>
+
+      <div class="coffee-options">
+        <button class="coffee-option active"
+                onclick="selectCoffee(5,this)">
+          $5
+        </button>
+
+        <button class="coffee-option"
+                onclick="selectCoffee(10,this)">
+          $10
+        </button>
+
+        <button class="coffee-option"
+                onclick="selectCoffee(25,this)">
+          $25
+        </button>
+
+        <button class="coffee-option"
+                onclick="selectCoffee(50,this)">
+          $50
+        </button>
+
+        <button class="coffee-option"
+                onclick="selectCoffee(100,this)">
+          $100
+        </button>
+      </div>
+
+      <div class="coffee-result">
+        <strong id="coffee-count">1 coffee</strong>
+
+        <p id="coffee-message">
+          One small coffee for you.
+          One tiny step toward a Corolla for me.
+        </p>
+      </div>
+
+      <p class="fine-print">
+        This is just a fun calculator.
+        No payment is collected here yet.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- FUNDRAISING GOAL -->
+
+<section class="goal-section" id="goal">
+  <div class="container">
+
+    <div class="section-label">
+      04 / THE BIG DREAM
+    </div>
+
+    <h2>
+      How many coffees<br>
+      until a Corolla?
+    </h2>
+
+    <div class="goal-card">
+
+      <p>EXAMPLE FUNDRAISING TARGET</p>
+
+      <div class="goal-amount" id="goal-amount">
+        $5,000 CAD
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <p id="progress-description">
+        Fundraising hasn't started yet.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <strong id="raised-display">$0</strong>
+          <span>Confirmed raised</span>
+        </div>
+
+        <div class="stat">
+          <strong id="coffees-remaining">1,000</strong>
+          <span>$5 coffees remaining</span>
+        </div>
+      </div>
+
+      <p style="font-size:13px;margin-top:25px">
+        Target is illustrative.
+        Progress is manually updated and
+        is not connected to a payment provider.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+
+<section class="donate-section" id="donate">
+  <div class="container">
+
+    <div class="eyebrow">
+      THE COROLLA CAMPAIGN
+    </div>
+
+    <h2>
+      Prince George,<br>
+      let's make this happen.
     </h2>
 
     <p>
-      A few dollars, a shared link,
-      or just telling a friend.
-      Every little bit helps
-      move the mission forward.
+      Whether it's five bucks, a shared
+      link, or a good laugh,
+      thanks for checking out
+      my slightly ridiculous dream.
     </p>
 
     <p>
-      Let's see if the internet
-      can actually buy someone
-      a commuter car.
+      One day, maybe I'll be driving
+      around PG in a Corolla that
+      the internet helped buy.
     </p>
 
     <div class="coming-soon">
-      DONATIONS COMING SOON ↗
+      DONATIONS COMING SOON 🚗
     </div>
 
   </div>
-
 </section>
 
 </main>
 
 <footer>
   <div class="container">
-    © 2026 Buy Me a Car!
+    Made with optimism and northern BC humour.
     <br>
-    Personal fundraiser — not a registered charity.
+    Prince George, British Columbia
+    <br><br>
+    © 2026 Buy Me a Corolla
+    <br>
+    Personal fundraiser. Not a registered charity.
+    Not affiliated with Toyota or the City of Prince George.
   </div>
 </footer>
+
+<script>
+/*
+  WEBSITE SETTINGS
+
+  Change the numbers below when you have
+  a real fundraising goal and verified
+  contributions.
+*/
+
+const fundraisingGoal = 5000;
+const confirmedRaised = 0;
+const coffeePrice = 5;
+
+function formatMoney(number) {
+  return new Intl.NumberFormat("en-CA", {
+    style: "currency",
+    currency: "CAD",
+    maximumFractionDigits: 0
+  }).format(number);
+}
+
+function updateFundraising() {
+  const remaining = Math.max(
+    0, fundraisingGoal - confirmedRaised
+  );
+
+  const percentage = Math.min(
+    100,
+    Math.max(0, confirmedRaised / fundraisingGoal * 100)
+  );
+
+  const coffeesRemaining = Math.ceil(
+    remaining / coffeePrice
+  );
+
+  document.getElementById("goal-amount").textContent =
+    formatMoney(fundraisingGoal) + " CAD";
+
+  document.getElementById("raised-display").textContent =
+    formatMoney(confirmedRaised);
+
+  document.getElementById("coffees-remaining").textContent =
+    coffeesRemaining.toLocaleString("en-CA");
+
+  document.getElementById("progress-fill").style.width =
+    percentage + "%";
+
+  document.getElementById("progress-description").textContent =
+    formatMoney(confirmedRaised) +
+    " of " +
+    formatMoney(fundraisingGoal) +
+    " raised (" +
+    percentage.toFixed(1) + "%).";
+}
+
+function selectCoffee(amount, button) {
+  const coffees = amount / coffeePrice;
+
+  document.getElementById("coffee-count").textContent =
+    coffees + (coffees === 1 ? " coffee" : " coffees");
+
+  document.getElementById("coffee-message").textContent =
+    formatMoney(amount) +
+    " would cover " + coffees +
+    " virtual coffees — all toward the Corolla dream!";
+
+  document.querySelectorAll(".coffee-option")
+    .forEach(option => option.classList.remove("active"));
+
+  button.classList.add("active");
+}
+
+updateFundraising();
+</script>
+
+</body>
+</html>
+
+
 
 </body>
 </html>
